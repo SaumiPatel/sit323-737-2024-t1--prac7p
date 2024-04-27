@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test
+  labels:
+    tier: frontend
+spec:
+  containers:
+    - image: saumil1103/node-webapp:1.1.1
+      imagePullPolicy: Never
+      name: nodewebapp
+      ports:
+        - containerPort: 3040
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
